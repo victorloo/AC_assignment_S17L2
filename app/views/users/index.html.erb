@@ -8,10 +8,10 @@
   <% @users.each do |user| %>
     <tr>
       <td><%= link_to user.name, user_path(user) %></td>
-    </tr>
-    <tr>
       <td>
-        <%= user.role %>
+        <% if user.id == 1 %>
+          <p>Admin</p>
+        <% end %>
       </td>
     </tr>
   <% end %>
